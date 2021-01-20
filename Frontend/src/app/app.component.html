@@ -1,0 +1,31 @@
+<div id="capa">
+  <header id="cabecera">
+    <h1>MovieVision</h1>  
+  </header>
+
+    <nav id="menu">
+      <ul>
+        <li><a [routerLink]="['/nosotros']">Nosotros</a></li>
+        <li><a [routerLink]="['/peliculas']">Películas</a></li>
+        <li><a [routerLink]="['/crear-pelicula']">Cargar Película</a></li>
+        <li><a [routerLink]="['/contacto']">Contacto</a></li>
+      </ul>  
+    </nav>
+
+    <section id="content">
+       <router-outlet></router-outlet>      
+    </section>
+
+    <footer id="footer">
+        <p>Desarrollado por Adriana Muñoz&copy; Derechos Reservados 2021</p>
+        <p>adrianitamunoz0@gmail.com</p>
+        <p>Buenos Aires-Argentina</p>      
+    </footer>
+
+
+ 
+
+</div>
+
+
+

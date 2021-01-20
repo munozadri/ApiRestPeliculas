@@ -1,0 +1,48 @@
+<div class="container">
+	<h2>Cargar Película</h2>
+
+	<div class=" message success" *ngIf="status == 'success'">
+		La película se ha cargado correctamente, puedes <a href="#">verla aquí</a>
+	</div>
+	<div class=" message failed" *ngIf="status == 'failed'">
+		La película no se ha cargado correctamente
+	</div>
+
+	<form #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+		<p>
+			<label for="nombre">Nombre</label>
+			<input type="text" name="nombre" #nombre="ngModel" [(ngModel)]="project.nombre" required/>
+			<span class="form-error" *ngIf="nombre.touched && !nombre.valid">El nombre es obligatorio</span>
+		</p>
+		<p>
+			<label for="origen">Origen de la película</label>
+			<input type="text" name="origen" #origen="ngModel" [(ngModel)]="project.origen" required/>
+			<span class="form-error" *ngIf="origen.touched && !origen.valid">El origen es obligatorio</span>
+		</p>
+		<p>
+			<label for="ano">Año de estreno</label>
+			<input class="form-error" type="number" name="ano" #ano="ngModel" [(ngModel)]="project.ano" />
+		</p>
+		<p>
+			<label for="director">Director</label>
+			<input type="text" name="director" #director="ngModel" [(ngModel)]="project.director" required/>
+			<span class="form-error" *ngIf="director.touched && !director.valid">El director es obligatorio</span>
+		</p>
+		<p>
+			<label for="reparto">Reparto</label>
+			<input type="text" name="reparto" #reparto="ngModel" [(ngModel)]="project.reparto" required />
+			<span class="form-error" *ngIf="reparto.touched && !reparto.valid">El reparto es obligatorio</span>
+		</p>
+
+		<p>
+			<label for="image">Imagen de la Película</label>
+			<input type="file" name="image" placeholder="imagen" (change)="fileChangeEvent($event)" />
+		</p>
+		
+		<input type="submit" value="Cargar" [disabled]="!projectForm.form.valid" />
+
+		
+
+	</form>
+
+</div>

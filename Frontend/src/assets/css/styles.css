@@ -1,0 +1,250 @@
+@font-face{
+	font-family: "yanone";
+	src: url("fonts/yanone.ttf");
+}
+@font-face{
+	font-family: "finger";
+	src: url("fonts/finger.ttf");
+}
+
+*{
+	margin: 0px;
+	padding: 0px;	
+}
+
+body{
+	background-image: url("img/collage-películas.jpg");
+	background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed; 
+    background-position: all;    
+    overflow-x: hidden;
+	font-family: "yanone", Arial;
+}
+
+
+#capa{
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,.6);	
+	background-attachment: fixed; 
+}
+
+#cabecera{
+	height: 150px;
+	color: #e50914;
+	font-weight: bold;
+	font-size: 45px;
+	margin-left: 50px;
+	padding-top: 20px;
+}
+
+#menu{
+	display: block;
+	width: 100%;
+	height: 50px;
+	padding-left: 25%;
+	font-family: "yanone";
+	background: rgba(0,0,0,.75);
+	margin-bottom: 50px;
+}
+
+#menu ul li{
+	font-size: 27px;
+	font-weight: bold;
+    display: inline-block;
+    margin: 0px 50px 0px 20px;
+    letter-spacing: 1px;
+    line-height: 50px;    
+}
+
+#menu ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    transition: all 200ms;
+}
+
+#menu ul li a:hover{
+	color: red;
+	transform: scale(1.2,1.2); 
+}
+
+#content{
+	width: 75%;
+	margin: 0px auto;
+	min-height: 680px;	
+	background: rgba(0,0,0,.75);
+	color: white;
+}
+
+#footer{
+	width: 100%;
+	margin: 0px auto;
+	margin-top: 20px;
+	padding: 3px;
+	background: rgba(0,0,0,.75);
+	color: white;
+	font-family: "yanone";
+	font-size: 17px;
+	text-align: center;
+}
+
+/*Sección About*/
+#title{
+	width: 70%;
+	margin: 0px auto;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 80px;
+}
+
+#title h1{
+	font-family: "finger";
+	font-size: 50px;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+}
+
+#title h2{
+	font-size: 25px;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#title p{
+	font-size: 25px;		
+}
+
+.about{
+	width: 75%;
+	margin: 0px auto;
+	margin-bottom: 20px;
+	font-size: 26px;
+}
+
+.about h2{
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+}
+
+.about p{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	text-align: justify;
+	font-size: 22px;
+}
+
+/*Sección cargar película*/
+
+.container{
+	padding: 70px;
+	padding-top: 20px;
+}
+
+.container h2{
+	display: block;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 10px;
+	margin-bottom: 15px;
+	font-size: 35px;	
+}
+
+form{
+	width: 50%;
+	margin-left: 33%;
+}
+
+form label{
+	display: block;
+	width: 100%;
+	margin-top: 10px;
+	margin-bottom: 5px;
+	font-size: 20px;
+}
+
+form input[type="text"],
+form input[type="number"]{
+	width: 65%;
+	padding: 5px;
+}
+
+form button,
+form input[type="submit"]{
+	display: block;
+	font-size: 17px;
+	padding:9px;
+	margin-top: 25px;
+	border: 1px solid #e50914;
+	background-color: black;
+	color: white;
+	cursor: pointer;
+	margin-left: 30%;
+}
+
+form input[disabled]{
+	opacity: 0.4;
+	cursor: not-allowed;
+}
+.form-error{
+	padding: 5px;
+	color:#e87c03;
+}
+
+.message{
+	padding: 5px;
+	color:#e87c03;
+}
+
+.success{
+	color: green;
+	font-size: 20px;
+}
+
+.success a{
+	color: green;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.failed{
+	color: red;
+	font-size: 20px;
+}
+
+/*Seccion de Películas*/
+
+.project{
+	display: block;
+	list-style: none;
+	float: left;
+	width: 28%;
+	text-align: center;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+}
+
+.project .image{
+	width: 100%;
+	height: 220px;
+	overflow: hidden;
+}
+
+.project img{
+	width: 100%;
+}
+
+.paginacion-estilo{
+	width: 20%;
+	height: 25px;
+	margin: 0px auto;
+	border: 1px solid red;
+	background-color: rgba(0,0,0,.75);
+}
+
+.clearfix{
+	float: none;
+	clear: both;
+}

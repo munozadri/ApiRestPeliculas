@@ -1,0 +1,21 @@
+<div class="container">
+	<h2>Películas</h2>
+
+	<ul>
+		<li *ngFor="let project of projects | paginate: config" class="project">
+			<div class="image">
+				<img src="{{url+'get-image/'+project.image}}" *ngIf="project.image"/>
+			</div>
+			<h3>{{project.nombre}}</h3>
+			<h3>{{project.origen}}</h3>
+			<h3>{{project.ano}}</h3>
+			<h3>{{project.director}}</h3>
+			<h3>{{project.reparto}}</h3>
+		</li>
+	</ul>
+	<div class="clearfix"></div>	
+		
+</div>
+<div class="paginacion-estilo">
+		<pagination-controls (pageChange)="pageChanged($event)" class="paginacion"></pagination-controls>
+</div>
